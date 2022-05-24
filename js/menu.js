@@ -1,8 +1,14 @@
-$(document).ready(function(){
-    $('.nav-link').clcik(function(e){
+$(document).ready(function() {
+
+
+    $('.nav-link').click(function(e) {
+
         e.preventDefault()
+
         let url = $(this).attr('href')
+
         $('#content').empty()
+
         $('#content').load(url)
     })
 })
