@@ -38,7 +38,7 @@ $(document).ready(function() {
     
     })
     
-   
+   $('.btn-save').removeAttr('data-operation', 'insert')
     
     $('.btn-save').show()
     
