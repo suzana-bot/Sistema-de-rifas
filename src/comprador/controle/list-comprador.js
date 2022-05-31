@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-    $('#table-tipo').DataTable({
+    $('#table-comprador').DataTable({
     
     "processing": true,
     
@@ -8,7 +8,7 @@ $(document).ready(function() {
     
     "ajax": {
     
-    "url": "src/tipo/modelo/list-tipo.php",
+    "url": "src/comprador/modelo/list-comprador.php",
     
     "type": "POST"
     
