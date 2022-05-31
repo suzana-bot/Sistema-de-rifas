@@ -9,7 +9,7 @@ Include("../../conexao/conn.php");
 $ID = $_REQUEST['ID'];
 
 // Criar a nossa querie para interação com o banco de dados 
-$sql="DELETE FROM TIPO WHERE ID = $ID";
+$sql="DELETE FROM COMPRADOR WHERE ID = $ID";
 
 // Executar a nossa querie
 

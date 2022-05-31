@@ -2,7 +2,7 @@
     include('../../conexao/conn.php');
     $requestData = $_REQUEST;
     $colunas = $requestData['columns'];
-    $sql = 'SELECT ID, NOME FROM TIPO WHERE 1=1';
+    $sql = 'SELECT ID, NOME FROM COMPRADOR WHERE 1=1';
     $resultado = $pdo->query($sql);
     $qtdeLinhas = $resultado->rowCount();
     $filtro = $requestData['search']['value'];

@@ -12,9 +12,10 @@
         $operacao = isset($requestData['operacao']) ? $requestData['operacao'] : '';
         if($operacao == 'insert'){
             try{
-                $stmt = $pdo -> prepare('INSERT INTO TIPO (NOME) VALUES (:a)');
+                $stmt = $pdo -> prepare('INSERT INTO COMPRADOR (NOME) VALUES (:a, :b)');
                 $stmt -> execute(array(
-                    ':a' => $requestData['NOME']
+                    ':a' => $requestData['NOME'],
+                    ':b' => $requestData['CELULAR']
                 ));
                 $dados = array(
                     "tipo" => 'success',
@@ -29,10 +30,11 @@
                 
         }else{
             try{
-                $stmt = $pdo -> prepare('UPDATE TIPO SET NOME = :a WHERE ID = :id');
+                $stmt = $pdo -> prepare('UPDATE COMPRADOR SET NOME = :a, CELULAR = :b WHERE ID = :id');
                 $stmt -> execute(array(
                     ':ID' => $ID,
-                    ':a' => $requestData['NOME']   
+                    ':a' => $requestData['NOME'],
+                    ':b' => $requestData['CELULAR']   
                 ));
                 $dados = array(
                     "tipo" => 'success',
