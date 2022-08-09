@@ -23,9 +23,14 @@ $(document).ready(function() {
                 if (dado.tipo == "success") {
                     $('.modal-body').load('src/vendedor/view/form-vendedor.html', function() {
                         $('#NOME').val(dado.dados.NOME)
-                        $('#CELULAR').val(dado.dados.CELULAR)
                         $('#NOME').attr('readonly', 'true')
+                        $('#CELULAR').val(dado.dados.CELULAR)
                         $('#CELULAR').attr('readonly', 'true')
+                        $('#LOGIN').val(dado.dados.LOGIN)
+                        $('#LOGIN').attr('readonly', 'true')
+                        $('#SENHA').val(dado.dados.SENHA)
+                        $('#SENHA').attr('readonly', 'true')
+                        $('#TIPO_ID').empty()
                     })
                     $('.btn-save').hide()
                     $('#modal-vendedor').modal('show')
