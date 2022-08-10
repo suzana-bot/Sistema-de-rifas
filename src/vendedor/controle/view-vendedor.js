@@ -31,6 +31,23 @@ $(document).ready(function() {
                         $('#SENHA').val(dado.dados.SENHA)
                         $('#SENHA').attr('readonly', 'true')
                         $('#TIPO_ID').empty()
+
+                        var TIPO_ID = dado.dados.TIPO_ID
+
+                        $.ajax({
+                            dataType: 'json',
+                            type: 'POST',
+                            assync: true,
+                            url: 'src/tipo/modelo/all-tipo.php',
+                            success: function(dados){
+                                for(const result of dados){
+                                    if(result.ID == TIPO_ID){
+                                        $('#tipo_id').append(`<option values="${result.ID}">${result.NOME}</option>`)
+                                    }
+                                   
+                                }
+                            }
+                        })
                     })
                     $('.btn-save').hide()
                     $('#modal-vendedor').modal('show')
