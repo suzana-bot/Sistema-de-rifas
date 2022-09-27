@@ -9,4 +9,9 @@ $(document).ready(function(){
         $('.btn-save').attr('data-operation', 'insert')
         $('#modal-tipo').modal('show')
     })
+    $('.close, #close').click(function(e) {
+        e.preventDefault()
+        $('#modal-comprador').modal('hide')
+    })
+})
 })
